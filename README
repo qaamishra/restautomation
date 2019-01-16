@@ -1,0 +1,19 @@
+#Junit Runner
+RunTheFeature.java
+
+#Reports
+.\target\cucumber\index.html
+
+#Maven runner
+mvn test -Dcucumber.options="classpath:features" -Dcucumber.options="--glue com.bdd.steps"
+#format parameter is now depricated and new one is plugin
+mvn clean test -Dcucumber.options="classpath:features" -Dcucumber.options="--glue com.bdd.steps" -Dcucumber.options="--plugin html:target/cucumber"
+
+
+#Sure fire reports #Reference : https://maven.apache.org/surefire/maven-surefire-report-plugin/usage.html
+    #Command line
+    command#1 To generate report : mvn surefire-report:report
+    command#1 To generate css for report : mvn site -DgenerateReports=false
+
+    #Report folder
+    .\target\site
