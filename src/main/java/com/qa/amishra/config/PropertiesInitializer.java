@@ -65,4 +65,16 @@ public class PropertiesInitializer {
     public String getJsonFilePathForOptionsWithDate() {
         return props.getProperty("json.file.location.options.date");
     }
+
+    public String getJsonFilePathForOptionsNoEDate() {
+        return props.getProperty("json.file.location.options.noexcercisedate");
+    }
+
+    public String getJsonFilePathForOptionsNoAmt() {
+        return props.getProperty("json.file.location.options.noamt");
+    }
+
+    public String getJsonFilePathForOptionsDataValidation() {
+        return props.getProperty("json.file.location.options.datavalidation");
+    }
 }

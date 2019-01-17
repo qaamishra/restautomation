@@ -31,19 +31,19 @@ public class Smoke {
 
         //Save variable for runtime
         String name = DataGenerator.generateFullName();
-        String tradeDate=DataGenerator.generateWeekDayTradeDate();
-        String valueDate=DataGenerator.generateWeekDayValueDateAhead(tradeDate);
-        String custName=DataGenerator.generateValidCustomer();
-        String legalEntity=DataGenerator.generateValidLegalEntity();
-        String ccPair=DataGenerator.generateCurrencyCodePair();
+        String tradeDate = DataGenerator.generateWeekDayTradeDate();
+        String valueDate = DataGenerator.generateWeekDayValueDateAhead(tradeDate);
+        String custName = DataGenerator.generateValidCustomer();
+        String legalEntity = DataGenerator.generateValidLegalEntity();
+        String ccPair = DataGenerator.generateCurrencyCodePair();
         //Build Variables
         Map<String, String> myValues = new HashMap<String, String>();
         myValues.put("TRADER", name);
-        myValues.put("VALUE_DATE",valueDate);
-        myValues.put("TRADE_DATE",tradeDate);
-        myValues.put("CUSTOMER",custName);
-        myValues.put("LEGAL_ENTITY",legalEntity);
-        myValues.put("CCPAIR",ccPair);
+        myValues.put("VALUE_DATE", valueDate);
+        myValues.put("TRADE_DATE", tradeDate);
+        myValues.put("CUSTOMER", custName);
+        myValues.put("LEGAL_ENTITY", legalEntity);
+        myValues.put("CCPAIR", ccPair);
 
         //Build Json to post
         jsonToPost = JacksonUtils.buildParametrizedJsonToPostFromFile(new File(PropertiesInitializer.getInstance().getJsonFilePathForTrade()), myValues);
@@ -79,19 +79,19 @@ public class Smoke {
     public void iHaveTheValueDateDataOlderToTradeDate() throws Throwable {
         //Save variable for runtime
         String name = DataGenerator.generateFullName();
-        String tradeDate=DataGenerator.generateWeekDayTradeDate();
-        String valueDate=DataGenerator.generateWeekDayValueDateBehind(tradeDate);
-        String custName=DataGenerator.generateValidCustomer();
-        String legalEntity=DataGenerator.generateValidLegalEntity();
-        String ccPair=DataGenerator.generateCurrencyCodePair();
+        String tradeDate = DataGenerator.generateWeekDayTradeDate();
+        String valueDate = DataGenerator.generateWeekDayValueDateBehind(tradeDate);
+        String custName = DataGenerator.generateValidCustomer();
+        String legalEntity = DataGenerator.generateValidLegalEntity();
+        String ccPair = DataGenerator.generateCurrencyCodePair();
         //Build Variables
         Map<String, String> myValues = new HashMap<String, String>();
         myValues.put("TRADER", name);
-        myValues.put("VALUE_DATE",valueDate);
-        myValues.put("TRADE_DATE",tradeDate);
-        myValues.put("CUSTOMER",custName);
-        myValues.put("LEGAL_ENTITY",legalEntity);
-        myValues.put("CCPAIR",ccPair);
+        myValues.put("VALUE_DATE", valueDate);
+        myValues.put("TRADE_DATE", tradeDate);
+        myValues.put("CUSTOMER", custName);
+        myValues.put("LEGAL_ENTITY", legalEntity);
+        myValues.put("CCPAIR", ccPair);
 
         //Build Json to post
         jsonToPost = JacksonUtils.buildParametrizedJsonToPostFromFile(new File(PropertiesInitializer.getInstance().getJsonFilePathForTrade()), myValues);
@@ -107,19 +107,19 @@ public class Smoke {
     public void iHaveTheValueDateAsNonBusinessDate() throws Throwable {
         //Save variable for runtime
         String name = DataGenerator.generateFullName();
-        String tradeDate=DataGenerator.generateWeekEnd();
-        String valueDate=DataGenerator.generateWeekEnd();
-        String custName=DataGenerator.generateValidCustomer();
-        String legalEntity=DataGenerator.generateValidLegalEntity();
-        String ccPair=DataGenerator.generateCurrencyCodePair();
+        String tradeDate = DataGenerator.generateWeekEnd();
+        String valueDate = DataGenerator.generateWeekEnd();
+        String custName = DataGenerator.generateValidCustomer();
+        String legalEntity = DataGenerator.generateValidLegalEntity();
+        String ccPair = DataGenerator.generateCurrencyCodePair();
         //Build Variables
         Map<String, String> myValues = new HashMap<String, String>();
         myValues.put("TRADER", name);
-        myValues.put("VALUE_DATE",valueDate);
-        myValues.put("TRADE_DATE",tradeDate);
-        myValues.put("CUSTOMER",custName);
-        myValues.put("LEGAL_ENTITY",legalEntity);
-        myValues.put("CCPAIR",ccPair);
+        myValues.put("VALUE_DATE", valueDate);
+        myValues.put("TRADE_DATE", tradeDate);
+        myValues.put("CUSTOMER", custName);
+        myValues.put("LEGAL_ENTITY", legalEntity);
+        myValues.put("CCPAIR", ccPair);
 
         //Build Json to post
         jsonToPost = JacksonUtils.buildParametrizedJsonToPostFromFile(new File(PropertiesInitializer.getInstance().getJsonFilePathForTrade()), myValues);
@@ -135,19 +135,19 @@ public class Smoke {
     public void iHaveTheDataWithInvalidCustomerName() throws Throwable {
         //Save variable for runtime
         String name = DataGenerator.generateFullName();
-        String custName=DataGenerator.generateInValidCustomer();
-        String tradeDate=DataGenerator.generateWeekDayTradeDate();
-        String valueDate=DataGenerator.generateWeekDayValueDateAhead(tradeDate);
-        String legalEntity=DataGenerator.generateValidLegalEntity();
-        String ccPair=DataGenerator.generateCurrencyCodePair();
+        String custName = DataGenerator.generateInValidCustomer();
+        String tradeDate = DataGenerator.generateWeekDayTradeDate();
+        String valueDate = DataGenerator.generateWeekDayValueDateAhead(tradeDate);
+        String legalEntity = DataGenerator.generateValidLegalEntity();
+        String ccPair = DataGenerator.generateCurrencyCodePair();
         //Build Variables
         Map<String, String> myValues = new HashMap<String, String>();
         myValues.put("TRADER", name);
-        myValues.put("VALUE_DATE",valueDate);
-        myValues.put("TRADE_DATE",tradeDate);
-        myValues.put("CUSTOMER",custName);
-        myValues.put("LEGAL_ENTITY",legalEntity);
-        myValues.put("CCPAIR",ccPair);
+        myValues.put("VALUE_DATE", valueDate);
+        myValues.put("TRADE_DATE", tradeDate);
+        myValues.put("CUSTOMER", custName);
+        myValues.put("LEGAL_ENTITY", legalEntity);
+        myValues.put("CCPAIR", ccPair);
 
         //Build Json to post
         jsonToPost = JacksonUtils.buildParametrizedJsonToPostFromFile(new File(PropertiesInitializer.getInstance().getJsonFilePathForTrade()), myValues);
@@ -163,21 +163,21 @@ public class Smoke {
     public void iHaveTheDataWithInvalidLegalEntity() throws Throwable {
         //Save variable for runtime
         String name = DataGenerator.generateFullName();
-        String tradeDate=DataGenerator.generateWeekDayTradeDate();
-        String valueDate=DataGenerator.generateWeekDayValueDateAhead(tradeDate);
-        String custName=DataGenerator.generateValidCustomer();
-        String legalEntity=DataGenerator.generateInValidLegalEntity();
-        String ccPair=DataGenerator.generateCurrencyCodePair();
+        String tradeDate = DataGenerator.generateWeekDayTradeDate();
+        String valueDate = DataGenerator.generateWeekDayValueDateAhead(tradeDate);
+        String custName = DataGenerator.generateValidCustomer();
+        String legalEntity = DataGenerator.generateInValidLegalEntity();
+        String ccPair = DataGenerator.generateCurrencyCodePair();
 
 
         //Build Variables
         Map<String, String> myValues = new HashMap<String, String>();
         myValues.put("TRADER", name);
-        myValues.put("VALUE_DATE",valueDate);
-        myValues.put("TRADE_DATE",tradeDate);
-        myValues.put("CUSTOMER",custName);
-        myValues.put("LEGAL_ENTITY",legalEntity);
-        myValues.put("CCPAIR",ccPair);
+        myValues.put("VALUE_DATE", valueDate);
+        myValues.put("TRADE_DATE", tradeDate);
+        myValues.put("CUSTOMER", custName);
+        myValues.put("LEGAL_ENTITY", legalEntity);
+        myValues.put("CCPAIR", ccPair);
 
 
         //Build Json to post
@@ -187,7 +187,7 @@ public class Smoke {
 
     @Then("^a response contains the required error message for invalid Legal Entity$")
     public void aResponseContainsTheRequiredErrorMessageForInvalidLegalEntity() throws Throwable {
-        Assert.assertFalse("Actual response was \n"+response.asString(),response.asString().contains("SUCCESS"));
+        Assert.assertFalse(" only one legal enity is used CS Zurich, but even a invalid name is returning success \n Actual response was \n" + response.asString(), response.asString().contains("SUCCESS"));
     }
 
     @Given("^I have the data to post with invalid product type$")
@@ -231,11 +231,11 @@ public class Smoke {
     @Given("^I have the data to post with style American with excersise and trade dates before expiry$")
     public void iHaveTheDataToPostWithStyleAmericanWithExcersiseAndTradeDatesBeforeExpiry() throws Throwable {
         String style = TestConstants.STYLE_AMERICAN;
-        String tradeDate=DataGenerator.generateWeekDayTradeDate();
-        String excerciseDate=DataGenerator.generateWeekDayValueDateAhead(tradeDate);
-        String expiryDate=DataGenerator.generateWeekDayValueDateAhead(excerciseDate);
-        String preimumDate=expiryDate;
-        String deliveryDate=DataGenerator.generateWeekDayValueDateAhead(preimumDate);
+        String tradeDate = DataGenerator.generateWeekDayTradeDate();
+        String excerciseDate = DataGenerator.generateWeekDayValueDateAhead(tradeDate);
+        String expiryDate = DataGenerator.generateWeekDayValueDateAhead(excerciseDate);
+        String preimumDate = expiryDate;
+        String deliveryDate = DataGenerator.generateWeekDayValueDateAhead(preimumDate);
 
         //Build Variables
         Map<String, String> myValues = new HashMap<String, String>();
@@ -255,11 +255,11 @@ public class Smoke {
     @Given("^I have the data to post with invalid style$")
     public void iHaveTheDataToPostWithInvalidStyle() throws Throwable {
         String style = "AUSTRALIAN";
-        String tradeDate=DataGenerator.generateWeekDayTradeDate();
-        String excerciseDate=DataGenerator.generateWeekDayValueDateAhead(tradeDate);
-        String expiryDate=DataGenerator.generateWeekDayValueDateAhead(excerciseDate);
-        String preimumDate=expiryDate;
-        String deliveryDate=DataGenerator.generateWeekDayValueDateAhead(preimumDate);
+        String tradeDate = DataGenerator.generateWeekDayTradeDate();
+        String excerciseDate = DataGenerator.generateWeekDayValueDateAhead(tradeDate);
+        String expiryDate = DataGenerator.generateWeekDayValueDateAhead(excerciseDate);
+        String preimumDate = expiryDate;
+        String deliveryDate = DataGenerator.generateWeekDayValueDateAhead(preimumDate);
 
         //Build Variables
         Map<String, String> myValues = new HashMap<String, String>();
@@ -283,11 +283,11 @@ public class Smoke {
     @Given("^I have the data to post with invalid date date$")
     public void iHaveTheDataToPostWithInvalidDateDate() throws Throwable {
         String style = TestConstants.STYLE_AMERICAN;
-        String tradeDate=DataGenerator.generateWeekDayTradeDate();
-        String excerciseDate=DataGenerator.generateWeekDayValueDateAhead(tradeDate);
-        String deliveryDate=DataGenerator.generateWeekDayValueDateAhead(excerciseDate);
-        String expiryDate=DataGenerator.generateWeekDayValueDateAhead(deliveryDate);
-        String preimumDate=expiryDate;
+        String tradeDate = DataGenerator.generateWeekDayTradeDate();
+        String excerciseDate = DataGenerator.generateWeekDayValueDateAhead(tradeDate);
+        String deliveryDate = DataGenerator.generateWeekDayValueDateAhead(excerciseDate);
+        String expiryDate = DataGenerator.generateWeekDayValueDateAhead(deliveryDate);
+        String preimumDate = expiryDate;
 
 
         //Build Variables
@@ -312,11 +312,11 @@ public class Smoke {
     @Given("^I have the data to post with excercise date before trade date$")
     public void iHaveTheDataToPostWithExcerciseDateBeforeTradeDate() throws Throwable {
         String style = TestConstants.STYLE_AMERICAN;
-        String excerciseDate=DataGenerator.generateWeekDayTradeDate();
-        String tradeDate=DataGenerator.generateWeekDayValueDateAhead(excerciseDate);//shifted the date to prepare negative test data
-        String expiryDate=DataGenerator.generateWeekDayValueDateAhead(excerciseDate);
-        String preimumDate=expiryDate;
-        String deliveryDate=DataGenerator.generateWeekDayValueDateAhead(preimumDate);
+        String excerciseDate = DataGenerator.generateWeekDayTradeDate();
+        String tradeDate = DataGenerator.generateWeekDayValueDateAhead(excerciseDate);//shifted the date to prepare negative test data
+        String expiryDate = DataGenerator.generateWeekDayValueDateAhead(excerciseDate);
+        String preimumDate = expiryDate;
+        String deliveryDate = DataGenerator.generateWeekDayValueDateAhead(preimumDate);
 
         //Build Variables
         Map<String, String> myValues = new HashMap<String, String>();
@@ -335,11 +335,11 @@ public class Smoke {
     @Given("^I have the data to post with wrong date data$")
     public void iHaveTheDataToPostWithWrongDateData() throws Throwable {
         String style = TestConstants.STYLE_AMERICAN;
-        String tradeDate=DataGenerator.generateWeekDayTradeDate();
-        String excerciseDate=DataGenerator.generateCurrencyCode();
-        String expiryDate=DataGenerator.generateFullName();
-        String preimumDate=expiryDate;
-        String deliveryDate=DataGenerator.generateInValidLegalEntity();
+        String tradeDate = DataGenerator.generateWeekDayTradeDate();
+        String excerciseDate = DataGenerator.generateCurrencyCode();
+        String expiryDate = DataGenerator.generateFullName();
+        String preimumDate = expiryDate;
+        String deliveryDate = DataGenerator.generateInValidLegalEntity();
 
         //Build Variables
         Map<String, String> myValues = new HashMap<String, String>();
@@ -358,5 +358,181 @@ public class Smoke {
     @Then("^a response contains the error message for wrong date$")
     public void aResponseContainsTheErrorMessageForWrongDate() throws Throwable {
         Assert.assertTrue(response.asString().contains("Bad Request"));
+    }
+
+    @Given("^I have the data to post without excercise date and american style$")
+    public void iHaveTheDataToPostWithoutExcerciseDateAndAmericanStyle() throws Throwable {
+        String style = TestConstants.STYLE_AMERICAN;
+        String tradeDate = DataGenerator.generateWeekDayTradeDate();
+        String expiryDate = DataGenerator.generateWeekDayValueDateAhead(tradeDate);
+        String preimumDate = expiryDate;
+        String deliveryDate = DataGenerator.generateWeekDayValueDateAhead(preimumDate);
+
+        //Build Variables
+        Map<String, String> myValues = new HashMap<String, String>();
+        myValues.put("STYLE", style);
+        myValues.put("TRADE_DATE", tradeDate);
+        myValues.put("EXPIRY_DATE", expiryDate);
+        myValues.put("PREMIUM_DATE", preimumDate);
+        myValues.put("DELIVERY_DATE", deliveryDate);
+
+        //Build Json to post
+        jsonToPost = JacksonUtils.buildParametrizedJsonToPostFromFile(new File(PropertiesInitializer.getInstance().getJsonFilePathForOptionsNoEDate()), myValues);
+
+    }
+
+    @Then("^a response contains the error message for no excercise date$")
+    public void aResponseContainsTheErrorMessageForNoExcerciseDate() throws Throwable {
+        Assert.assertFalse("exerciseStartDate should be present in payload but even without it ,it returns success.", response.asString().contains("SUCCESS"));
+
+    }
+
+    @Given("^I have the data to post where Excercise date is before trade date$")
+    public void iHaveTheDataToPostWhereExcerciseDateIsBeforeTradeDate() throws Throwable {
+        String style = TestConstants.STYLE_AMERICAN;
+        String tradeDate = DataGenerator.generateWeekDayTradeDate();
+        String excerciseDate = DataGenerator.generateWeekDayValueDateBehind(tradeDate);
+        String expiryDate = DataGenerator.generateWeekDayValueDateAhead(tradeDate);
+        String preimumDate = expiryDate;
+        String deliveryDate = DataGenerator.generateWeekDayValueDateAhead(preimumDate);
+
+        //Build Variables
+        Map<String, String> myValues = new HashMap<String, String>();
+        myValues.put("STYLE", style);
+        myValues.put("TRADE_DATE", tradeDate);
+        myValues.put("EXCERCISE_DATE", excerciseDate);
+        myValues.put("EXPIRY_DATE", expiryDate);
+        myValues.put("PREMIUM_DATE", preimumDate);
+        myValues.put("DELIVERY_DATE", deliveryDate);
+
+        //Build Json to post
+        jsonToPost = JacksonUtils.buildParametrizedJsonToPostFromFile(new File(PropertiesInitializer.getInstance().getJsonFilePathForOptionsWithDate()), myValues);
+
+    }
+
+    @Then("^a response contains the error message for excercise date cannot be behind$")
+    public void aResponseContainsTheErrorMessageForExcerciseDateCannotBeBehind() throws Throwable {
+        Assert.assertFalse("Excercise date is before trade date it still passed", response.asString().contains("SUCCESS"));
+    }
+
+    @Given("^I have the data to post where Excercise date is ahead of expiry date$")
+    public void iHaveTheDataToPostWhereExcerciseDateIsAheadOfExpiryDate() throws Throwable {
+        String style = TestConstants.STYLE_AMERICAN;
+        String tradeDate = DataGenerator.generateWeekDayTradeDate();
+        String expiryDate = DataGenerator.generateWeekDayValueDateAhead(tradeDate);
+        String excerciseDate = DataGenerator.generateWeekDayValueDateAhead(expiryDate);
+        String preimumDate = expiryDate;
+        String deliveryDate = DataGenerator.generateWeekDayValueDateAhead(preimumDate);
+
+        //Build Variables
+        Map<String, String> myValues = new HashMap<String, String>();
+        myValues.put("STYLE", style);
+        myValues.put("TRADE_DATE", tradeDate);
+        myValues.put("EXCERCISE_DATE", excerciseDate);
+        myValues.put("EXPIRY_DATE", expiryDate);
+        myValues.put("PREMIUM_DATE", preimumDate);
+        myValues.put("DELIVERY_DATE", deliveryDate);
+
+        //Build Json to post
+        jsonToPost = JacksonUtils.buildParametrizedJsonToPostFromFile(new File(PropertiesInitializer.getInstance().getJsonFilePathForOptionsWithDate()), myValues);
+
+    }
+
+    @Then("^a response contains the error message for excercise date cannot be ahead of expiry$")
+    public void aResponseContainsTheErrorMessageForExcerciseDateCannotBeAheadOfExpiry() throws Throwable {
+        Assert.assertFalse("ExerciseStartDate should be before expiry date ,but even for ahead date it passes.", response.asString().contains("SUCCESS"));
+    }
+
+    String style;
+    String tradeDate;
+    String expiryDate;
+    String excerciseDate;
+    String deliveryDate;
+    String preimumDate;
+
+    @Given("^I have the data to post where premiumDate is ahead of deliveryDate$")
+    public void iHaveTheDataToPostWherePremiumDateIsAheadOfDeliveryDate() throws Throwable {
+        style = TestConstants.STYLE_AMERICAN;
+        tradeDate = DataGenerator.generateWeekDayTradeDate();
+        expiryDate = DataGenerator.generateWeekDayValueDateAhead(tradeDate);
+        excerciseDate = DataGenerator.generateWeekDayValueDateAhead(expiryDate);
+        deliveryDate = DataGenerator.generateWeekDayValueDateAhead(excerciseDate);
+        preimumDate = DataGenerator.generateWeekDayValueDateAhead(deliveryDate);
+
+        //Build Variables
+        Map<String, String> myValues = new HashMap<String, String>();
+        myValues.put("STYLE", style);
+        myValues.put("TRADE_DATE", tradeDate);
+        myValues.put("EXCERCISE_DATE", excerciseDate);
+        myValues.put("EXPIRY_DATE", expiryDate);
+        myValues.put("PREMIUM_DATE", preimumDate);
+        myValues.put("DELIVERY_DATE", deliveryDate);
+
+        //Build Json to post
+        jsonToPost = JacksonUtils.buildParametrizedJsonToPostFromFile(new File(PropertiesInitializer.getInstance().getJsonFilePathForOptionsWithDate()), myValues);
+
+    }
+
+
+    @Then("^a response contains the error message for premiumDate date with value$")
+    public void aResponseContainsTheErrorMessageForPremiumDateDateWithValue() throws Throwable {
+        Assert.assertTrue("TradeDate is displayed instead of premium date \n "+response.asString(), response.asString().contains("Premium date "+preimumDate+" has to be before delivery date "+deliveryDate+" "));
+    }
+
+    @Given("^I have the data to post where EUROPEAN style payload has exerciseStartDate$")
+    public void iHaveTheDataToPostWhereEUROPEANStylePayloadHasExerciseStartDate() throws Throwable {
+        String style = TestConstants.STYLE_EUROPEAN;
+        String tradeDate = DataGenerator.generateWeekDayTradeDate();
+        String excerciseDate = DataGenerator.generateWeekDayValueDateAhead(tradeDate);
+        String expiryDate = DataGenerator.generateWeekDayValueDateAhead(excerciseDate);
+        String preimumDate = expiryDate;
+        String deliveryDate = DataGenerator.generateWeekDayValueDateAhead(preimumDate);
+
+        //Build Variables
+        Map<String, String> myValues = new HashMap<String, String>();
+        myValues.put("STYLE", style);
+        myValues.put("TRADE_DATE", tradeDate);
+        myValues.put("EXCERCISE_DATE", excerciseDate);
+        myValues.put("EXPIRY_DATE", expiryDate);
+        myValues.put("PREMIUM_DATE", preimumDate);
+        myValues.put("DELIVERY_DATE", deliveryDate);
+
+        //Build Json to post
+        jsonToPost = JacksonUtils.buildParametrizedJsonToPostFromFile(new File(PropertiesInitializer.getInstance().getJsonFilePathForOptionsWithDate()), myValues);
+
+    }
+
+    @Then("^a response contains the error message  EUROPEAN cannot have payload has exerciseStartDate$")
+    public void aResponseContainsTheErrorMessageEUROPEANCannotHavePayloadHasExerciseStartDate() throws Throwable {
+        Assert.assertFalse("EUROPEAN style will not have exerciseStartDate, but still it passes", response.asString().contains("SUCCESS"));
+    }
+
+    @Given("^I have the data to post where amount is zero$")
+    public void iHaveTheDataToPostWhereAmountIsZero() throws Throwable {
+        String style = TestConstants.STYLE_EUROPEAN;
+        //Build Variables
+        Map<String, String> myValues = new HashMap<String, String>();
+        myValues.put("STYLE", style);
+
+        //Build Json to post
+        jsonToPost = JacksonUtils.buildParametrizedJsonToPostFromFile(new File(PropertiesInitializer.getInstance().getJsonFilePathForOptionsNoAmt()), myValues);
+
+    }
+
+    @Then("^a response contains the error message$")
+    public void aResponseContainsTheErrorMessage() throws Throwable {
+        Assert.assertFalse("", response.asString().contains("SUCCESS"));
+    }
+
+    @Given("^I have the data to post in valid data for strategy payCcy premiumCcy premiumType trader$")
+    public void iHaveTheDataToPostInValidDataForStrategyPayCcyPremiumCcyPremiumTypeTrader() throws Throwable {
+        String style = TestConstants.STYLE_EUROPEAN;
+        //Build Variables
+        Map<String, String> myValues = new HashMap<String, String>();
+        myValues.put("STYLE", style);
+
+        //Build Json to post
+        jsonToPost = JacksonUtils.buildParametrizedJsonToPostFromFile(new File(PropertiesInitializer.getInstance().getJsonFilePathForOptionsDataValidation()), myValues);
+
     }
 }
